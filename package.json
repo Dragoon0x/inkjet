@@ -1,0 +1,35 @@
+{
+  "name": "inkjet",
+  "version": "2.0.0",
+  "description": "Generative SVG patterns. 200 parametric patterns across 12 categories. Export as SVG, CSS, data URI, React component, or Figma-ready. Halftone, crosshatch, stipple, circuit, topography, herringbone, and 194 more. Zero dependencies.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --minify",
+    "test": "node test/run.js",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "svg", "pattern", "generative", "texture", "halftone", "crosshatch",
+    "stipple", "geometric", "background", "fill", "parametric", "procedural",
+    "design-system", "figma", "css-pattern", "noise", "dots", "grid", "waves"
+  ],
+  "author": "0xDragoon",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/dragoon0x/inkjet" },
+  "homepage": "https://dragoon0x.github.io/inkjet/",
+  "sideEffects": false
+}
