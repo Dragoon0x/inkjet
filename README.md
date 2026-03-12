@@ -3,13 +3,13 @@
 Generative SVG patterns. 500 parametric patterns across 24 categories. Export as SVG, CSS, data URI, React, Figma-ready, or Tailwind. Zero dependencies.
 
 ```
-npm install inkjet
+npm install useinkjet
 ```
 
 ## One function
 
 ```js
-import { generate } from 'inkjet'
+import { generate } from 'useinkjet'
 
 const { svg } = generate({ pattern: 'crosshatch', color: '#333', scale: 1.5 })
 ```
@@ -44,7 +44,7 @@ const { svg } = generate({ pattern: 'crosshatch', color: '#333', scale: 1.5 })
 ## 6 Export Formats
 
 ```js
-import { exportPattern } from 'inkjet'
+import { exportPattern } from 'useinkjet'
 
 exportPattern({ pattern: 'halftone' }, 'svg')      // Full SVG
 exportPattern({ pattern: 'halftone' }, 'css')      // CSS background-image
@@ -61,7 +61,7 @@ Every pattern accepts: `color`, `background`, `scale`, `rotation`, `strokeWidth`
 ## Compose
 
 ```js
-import { compose } from 'inkjet'
+import { compose } from 'useinkjet'
 
 const svg = compose([
   { pattern: 'dots', color: '#000', opacity: 0.3 },
@@ -72,7 +72,7 @@ const svg = compose([
 ## Apply to DOM
 
 ```js
-import { applyTo } from 'inkjet'
+import { applyTo } from 'useinkjet'
 
 applyTo(document.querySelector('.hero'), {
   pattern: 'circuit',
